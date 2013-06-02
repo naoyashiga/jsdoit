@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #fff;
+  font: 15px sans-serif;
+}
+
+#results{
+	font-size:14px;
+	font-weight:bold;
+	border:1px solid #ccc;
+	border-radius:10px;
+	box-shadow: 2px 2px 3px 1px #888 inset;
+	padding: 15px;
+	text-align: left;
+	min-height: 100px;
+}
+
+#word_list{
+	background-color: #eee;
+	font-size:14px;
+	font-weight:bold;
+	border:1px solid #ccc;
+	border-radius:10px;
+	box-shadow: 2px 2px 3px 1px #888 inset;
+	padding: 15px;
+	text-align: left;
+}
+#wiki_list{
+	background-color: #eee;
+	font-size:14px;
+	border:1px solid #ccc;
+	border-radius:10px;
+	box-shadow: 2px 2px 3px 1px #888 inset;
+	padding: 15px;
+	text-align: left;
+	min-height: 100px;
+}
+#wiki_list li{
+	margin-bottom: 8px;
+}
+#wiki_list p{
+	-webkit-animation:wiki_anime 2s ease;
+}
+@-webkit-keyframes wiki_anime{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+	
+#katakana{
+	list-style-type: none;
+}
+
+li{
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 5px;
+	padding: 3px 8px;
+	color:#fff;
+	background-color: #4671D5;
+	border:1px solid #4671D5;
+	border-radius: 10px;
+	/*
+	word-wrap:break-word;
+	*/
+	word-break:keep-all;
+	/*
+	-webkit-animation:katakana_anime 2s ease;
+	*/
+}
+
+@-webkit-keyframes katakana_anime{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+#katakana li:hover{
+	-webkit-animation:katakana_hover 0.2s ease infinite;
+}
+
+@-webkit-keyframes katakana_hover{
+	0%{-webkit-transform:rotateZ(0deg);}
+	25%{-webkit-transform:rotateZ(3deg);}
+	75%{-webkit-transform:rotateZ(-3deg);}
+	100%{-webkit-transform:rotateZ(0deg);}
+}
+.final{
+	color:black;
+}
+
+.interim{
+	color:green;
+}

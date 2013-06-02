@@ -1,0 +1,137 @@
+@charset "UTF-8";
+input[type="text"] {
+  width: 25px; }
+
+body {
+  padding: 4em;
+  background: #000; }
+
+#cube-container {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+#cube-viewport {
+  /*奥行きを指定*/
+  -webkit-perspective: 800px;
+  /*視点の位置を指定*/
+  -webkit-perspective-origin: 50% 500px; }
+
+#cube {
+  opacity: 0.8;
+  height: 400px;
+  width: 400px;
+  /*3D表現を使用する*/
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: rotate 10s ease -2s infinite alternate; }
+
+/*キューブの回転アニメーション*/
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg); }
+
+  25% {
+    -webkit-transform: rotateX(90deg) rotateY(60deg); }
+
+  50% {
+    -webkit-transform: rotateY(120deg); }
+
+  75% {
+    -webkit-transform: rotateX(300deg) rotateY(180deg); }
+
+  100% {
+    -webkit-transform: rotateX(180deg); } }
+
+#cube .cubie {
+  position: absolute;
+  margin: 1px;
+  border: 3px solid black;
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  background-color: aqua;
+  z-index: -1;
+  text-align: center;
+  font-size: 30px; }
+
+#cube .cubie > div {
+  line-height: 100px;
+  border-radius: 8px; }
+
+#cube .cubie > div span {
+  opacity: 0.6;
+  font-size: 300px; }
+
+/*キューブの位置*/
+.square-1 {
+  -webkit-animation: anime1 1s ease-in -2s infinite alternate; }
+
+.square-2 {
+  -webkit-animation: anime2 1s ease-in -2s infinite alternate; }
+
+.square-3 {
+  -webkit-animation: anime3 1s ease-in -2s infinite alternate; }
+
+.square-4 {
+  -webkit-animation: anime4 1s ease-in -2s infinite alternate; }
+
+.square-5 {
+  -webkit-animation: anime5 1s ease-in -2s infinite alternate; }
+
+.square-6 {
+  -webkit-animation: anime6 1s ease-in -2s infinite alternate; }
+
+/*キューブの各面におけるアニメーション*/
+@-webkit-keyframes anime1 {
+  0% {
+    -webkit-transform: rotateX(-180deg) translate3d(5px, -5px, 15px); }
+
+  100% {
+    -webkit-transform: rotateX(-180deg) translate3d(5px, -5px, 215px);
+    width: 410px;
+    height: 410px; } }
+
+@-webkit-keyframes anime2 {
+  0% {
+    -webkit-transform: rotateY(-90deg) translate3d(-10px, 5px, 0px); }
+
+  100% {
+    -webkit-transform: rotateY(-90deg) translate3d(-10px, 5px, 200px);
+    width: 410px;
+    height: 410px; } }
+
+@-webkit-keyframes anime3 {
+  0% {
+    -webkit-transform: rotateY(-90deg) translate3d(-10px, 5px, -10px); }
+
+  100% {
+    -webkit-transform: rotateY(-90deg) translate3d(-10px, 5px, -210px);
+    width: 410px;
+    height: 410px; } }
+
+@-webkit-keyframes anime4 {
+  0% {
+    -webkit-transform: rotateX(-180deg) translate3d(5px, -5px, 5px); }
+
+  100% {
+    -webkit-transform: rotateX(-180deg) translate3d(5px, -5px, -195px);
+    width: 10px;
+    height: 10px; } }
+
+@-webkit-keyframes anime5 {
+  0% {
+    -webkit-transform: rotateX(-90deg) translate3d(5px, 10px, 10px); }
+
+  100% {
+    -webkit-transform: rotateX(-90deg) translate3d(5px, 10px, 210px);
+    width: 410px;
+    height: 410px; } }
+
+@-webkit-keyframes anime6 {
+  0% {
+    -webkit-transform: rotateX(-90deg) translate3d(5px, 10px, 0px); }
+
+  100% {
+    -webkit-transform: rotateX(-90deg) translate3d(5px, 10px, -200px);
+    width: 410px;
+    height: 410px; } }

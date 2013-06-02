@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  background: #eee;
+  font: 15px sans-serif;
+}
+
+input[type="button"]{
+    padding:5px 8px;
+    font: bold 20px/1 "helvetica neue", helvetica, arial, sans-serif;
+    
+}
+
+input[type="button"]:active{
+    margin-top:10px;
+}
+
+#box{
+    float:left;
+}
+
+#canvas3{
+    border:1px solid #222;
+}

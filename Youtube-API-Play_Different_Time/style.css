@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #000;
+  font: bold 20px "helvetica neue", helvetica, arial, sans-serif;
+  color:#777;
+}
+
+#videoCurrentTime{
+    position:absolute;
+    top:10px;
+    left:120px;
+}
+
+#container{
+    position:absolute;
+    top:30px;
+    left:0;
+    opacity:0.5;
+    
+    background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat;
+}
+button.control {
+    margin-top: 5px;
+    margin-left: 10px;
+    background: #222;
+    border:1px solid #38538c;
+    border-radius: 4px;
+
+    color: #fff;
+    font: bold 13px "helvetica neue", helvetica, arial, sans-serif;
+    padding: 5px 0 6px 0;
+    text-align: center;
+
+    width: 40px;
+
+    -webkit-transition:1s ease;
+    -moz-transition:1s ease;
+}
+button.control:hover {
+    border:1px solid #3F92D2;
+    cursor: pointer;
+}

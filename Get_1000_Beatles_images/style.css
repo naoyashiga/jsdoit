@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background:#efefef;
+  font: 15px sans-serif;
+}
+
+#viewer li{
+	display:inline-block;
+}
+
+#viewer img{
+	margin:5px;
+	border-radius: 10%;
+	-webkit-box-shadow: inset 0 1px 10px 1px #999, 0px 1px 0 #333, 0 6px 0px #000, 0 8px 4px 1px #111;
+	-webkit-filter:contrast(130%);
+	
+	-webkit-transition:0.5s ease;
+	-webkit-animation:img_anime 2s ease;
+
+}
+
+/*
+#viewer img:hover{
+	-webkit-filter:grayscale(0%);
+}
+*/
+
+@-webkit-keyframes img_anime{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}

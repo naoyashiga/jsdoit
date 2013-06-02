@@ -1,0 +1,33 @@
+[draggable]{
+	-webkit-user-select:none;
+	user-select:none;
+}
+body{
+	background-color: #000;
+}
+.clear{
+	clear:both;
+}
+
+.column{
+	float:left;
+    margin-top:2px;
+	margin-right:2px;
+	cursor:move;
+	-webkit-transition: 0.3s ease-in-out;
+}
+
+.column.over{
+	border:2px dashed #000;
+}
+
+.column.small{
+	opacity:0.4;
+}
+
+#world{
+    display:none;
+}
+#video{
+    display:none;
+}

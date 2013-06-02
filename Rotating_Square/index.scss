@@ -1,0 +1,44 @@
+body { background-color: #DDDDDD; font: 30px sans-serif; }
+
+$size:30px;
+$size2:0px;
+$size3:0px;
+
+$color:#000;
+
+$name:anime1;
+$duration:0.8s;
+$timing:linear;
+$delay:0s;
+$iteraiton:infinite;
+$direction:normal;
+
+.box{
+    width:$size3;
+    height:$size3;
+    border-top:solid $size $color;
+    border-right:solid $size transparent;
+    border-bottom:solid $size $color;
+    border-left:solid $size transparent;
+    
+    border-top-right-radius:$size2;
+    border-top-left-radius:$size2;
+    border-bottom-right-radius:$size2;
+    border-bottom-left-radius:$size2;
+    
+    /*
+    -webkit-animation:$name $duration $timing $delay $iteraiton $direction;*/
+    
+    
+   -moz-animation: $name $duration $timing $delay $iteraiton $direction;
+
+}
+
+@-moz-keyframes anime1 {
+0% {-moz-transform: rotateZ(0deg);}
+100% {-moz-transform: rotateZ(360deg);}
+}
+
+.box:hover{
+     -moz-animation-play-state: paused;
+}

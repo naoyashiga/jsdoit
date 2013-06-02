@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*背景色*/
+/*メーターのサイズ*/
+/*ボーダーのサイズ*/
+/*ボーダーの色*/
+/*メーターを囲うdivのサイズ*/
+/*メーターを囲うdivの位置*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  background: #efefef;
+  font: 30px sans-serif; }
+
+#wrapper {
+  margin: 50px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  -webkit-animation: spin 10s linear infinite;
+  -moz-animation: spin 10s linear infinite; }
+
+/*回転アニメーション*/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateZ(0deg); }
+
+  100% {
+    -webkit-transform: rotateZ(180deg); } }
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotateZ(0deg); }
+
+  100% {
+    -moz-transform: rotateZ(180deg); } }
+
+/*カバーとなる背景色の半円*/
+.cover {
+  position: relative;
+  width: 200px;
+  height: 20px;
+  border-radius: 200px 200px 0 0;
+  /*ボーダーの設定*/
+  border-top: 80px solid #efefef;
+  border-right: 80px solid #efefef;
+  border-bottom: 80px solid #efefef;
+  border-left: 80px solid #efefef; }
+
+/*メーターとなるオレンジの半円*/
+.meter {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 20px;
+  border-radius: 200px 200px 0 0;
+  /*ボーダーの設定*/
+  border-top: 80px solid #efefef;
+  border-right: 80px solid #ff5900;
+  border-bottom: 80px solid #efefef;
+  border-left: 80px solid #ff5900;
+  /*最背面に設置*/
+  z-index: -1; }

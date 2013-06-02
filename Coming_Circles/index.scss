@@ -1,0 +1,58 @@
+body { background-color: #fff;}
+#logos {
+  position:absolute;  top: 0px;  left: 150px;  -webkit-perspective: 800px;
+}
+
+#cube {
+  display: block;  position: relative;  margin: 30px auto;
+  height: 200px;  width: 200px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotate3d(0,0,0,0deg);
+}
+
+#cube {
+-webkit-animation: upyourscache1356400200569 5s infinite cubic-bezier(0.75, 0.25, 0.73, 0.33) alternate;
+}
+
+@-webkit-keyframes upyourscache1356400200569 {
+0% { -webkit-transform: rotate3d(0,1,0,-45deg) ;}
+50% { -webkit-transform:  rotate3d(0,1,0,0deg) ;}
+100% {-webkit-transform: rotate3d(0,1,0,45deg) ; }
+}
+
+$size:30px;      
+.circle{
+  position: absolute;
+  height: $size;
+  width: $size;
+  background-color: #133AAC;
+  border-radius:50px;
+  -webkit-backface-visibility: visible;     
+}
+    
+$margin:100px;
+$startX:-300px;
+$startY:0px;
+$startZ:200px;
+
+$ROW:3;
+$Z_ROW:10;
+$COLUMN:3;
+
+@for $i from 1 through $ROW{
+  @for $j from 1 through $COLUMN{
+    @for $k from 1 through $Z_ROW{
+      .front-#{$i}-#{$j}-#{$k} {
+        -webkit-transform: rotate3d(0,1,0,180deg) translate3d($startX+$margin*$i,$startY+$margin*$j,$startZ+$margin*$k);
+        height: $size;
+        width: $size;
+        -webkit-animation: move 1s*$k infinite linear;
+      }
+      
+    }
+  }
+}
+@-webkit-keyframes move {
+  0% {-webkit-transform-origin:0 0 -1000px;opacity:0.3;}
+  100% {-webkit-transform-origin:0 0 1000px;opacity:1.0;}
+}

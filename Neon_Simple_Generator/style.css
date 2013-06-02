@@ -1,0 +1,24 @@
+body { 
+    background-color: #000;
+    color:#FFF;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: white;
+    height: 5px;
+    border-radius: 5px;
+}
+ 
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    position: relative;
+    top: -1px;
+    z-index: 1;
+    width: 11px;
+    height: 30px;
+ 
+    border-radius: 40px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #fdfdfd), color-stop(0.74, #e7e8e8), color-stop(0.44, #c7c8ca), color-stop(0.22, #f1f1f1), color-stop(0.00, #d8dada));
+background: -webkit-linear-gradient(top, #d8dada 0%, #f1f1f1 22%, #c7c8ca 44%, #e7e8e8 74%, #fdfdfd 100%);
+            }

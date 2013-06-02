@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  background: #efefef; }
+
+.box {
+  margin: 10px 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #04819E;
+  float: left;
+  color: #fff;
+  font: bold 15px "helvetica neue", helvetica, arial, sans-serif;
+  text-align: center;
+  line-height: 65px; }
+
+.border-0 {
+  border-top: 8px none #206676;
+  border-right: 8px none #38b2ce;
+  border-bottom: 8px none #015367;
+  border-left: 8px none #60b9ce; }
+
+.border-1 {
+  border-top: 8px solid #206676;
+  border-right: 8px solid #38b2ce;
+  border-bottom: 8px solid #015367;
+  border-left: 8px solid #60b9ce; }
+
+.border-2 {
+  border-top: 8px double #206676;
+  border-right: 8px double #38b2ce;
+  border-bottom: 8px double #015367;
+  border-left: 8px double #60b9ce; }
+
+.border-3 {
+  border-top: 8px groove #206676;
+  border-right: 8px groove #38b2ce;
+  border-bottom: 8px groove #015367;
+  border-left: 8px groove #60b9ce; }
+
+.border-4 {
+  border-top: 8px ridge #206676;
+  border-right: 8px ridge #38b2ce;
+  border-bottom: 8px ridge #015367;
+  border-left: 8px ridge #60b9ce; }
+
+.border-5 {
+  border-top: 8px inset #206676;
+  border-right: 8px inset #38b2ce;
+  border-bottom: 8px inset #015367;
+  border-left: 8px inset #60b9ce; }
+
+.border-6 {
+  border-top: 8px outset #206676;
+  border-right: 8px outset #38b2ce;
+  border-bottom: 8px outset #015367;
+  border-left: 8px outset #60b9ce; }
+
+.border-7 {
+  border-top: 8px dashed #206676;
+  border-right: 8px dashed #38b2ce;
+  border-bottom: 8px dashed #015367;
+  border-left: 8px dashed #60b9ce; }
+
+.border-8 {
+  border-top: 8px dotted #206676;
+  border-right: 8px dotted #38b2ce;
+  border-bottom: 8px dotted #015367;
+  border-left: 8px dotted #60b9ce; }

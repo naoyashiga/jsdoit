@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #efefef;
+}
+
+$circle_size:300px;
+$size:1.5px;
+
+.box{
+    position:absolute;
+    margin:10px 5px;
+    width:$circle_size;
+    height:$circle_size;
+    border-radius:50%;
+    background:#FF8E00;
+    
+    float:left;
+    
+    border-top:$size*2 dotted #FF8E00;
+    border-right:$size dotted #FF8E00;
+    border-bottom:$size*2 dotted #FF8E00;
+    border-left:$size*10 dotted #FF8E00;
+
+    
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}animation:spin 0.3s linear infinite;
+    }
+}
+
+@-webkit-keyframes spin{
+    0%{
+        border-top:$size*2 dotted #FF8E00;
+        border-right:$size dotted #FF8E00;
+        border-bottom:$size*2 dotted #FF8E00;
+        border-left:$size*10 dotted #FF8E00;
+      
+    }
+    25%{
+        border-top-left-radius:48%;
+        border-top-right-radius:45%;
+        border-bottom-left-radius:45%;
+        border-bottom-right-radius:48%;
+    }
+    50%{
+        border-top:$size dotted #FF8E00;
+        border-right:$size*10 dotted #FF8E00;
+        border-bottom:$size dotted #FF8E00;
+        border-left:$size dotted #FF8E00;
+        
+        border-top-left-radius:45%;
+        border-top-right-radius:48%;
+        border-bottom-left-radius:48%;
+        border-bottom-right-radius:45%;
+        
+    }
+    100%{
+        border-top:$size*2 dotted #FF8E00;
+        border-right:$size dotted #FF8E00;
+        border-bottom:$size*2 dotted #FF8E00;
+        border-left:$size*10 dotted #FF8E00;
+     
+    }
+}
+
+@keyframes spin{
+    0%{
+        border-top:$size*2 dotted #FF8E00;
+        border-right:$size dotted #FF8E00;
+        border-bottom:$size*2 dotted #FF8E00;
+        border-left:$size*10 dotted #FF8E00;
+      
+    }
+    25%{
+        border-top-left-radius:48%;
+        border-top-right-radius:45%;
+        border-bottom-left-radius:45%;
+        border-bottom-right-radius:48%;
+    }
+    50%{
+        border-top:$size dotted #FF8E00;
+        border-right:$size*10 dotted #FF8E00;
+        border-bottom:$size dotted #FF8E00;
+        border-left:$size dotted #FF8E00;
+        
+        border-top-left-radius:45%;
+        border-top-right-radius:48%;
+        border-bottom-left-radius:48%;
+        border-bottom-right-radius:45%;
+        
+    }
+    100%{
+        border-top:$size*2 dotted #FF8E00;
+        border-right:$size dotted #FF8E00;
+        border-bottom:$size*2 dotted #FF8E00;
+        border-left:$size*10 dotted #FF8E00;
+     
+    }
+
+}

@@ -1,0 +1,222 @@
+body {
+    margin:0px;
+	text-shadow: 0 0 10px #fff,
+        /*0 0 20px #fff,
+        0 0 30px #fff,*/
+        0 0 40px #ff00de,
+        0 0 70px #ff00de,
+        0 0 80px #ff00de,
+        0 0 100px #ff00de,
+        0 0 150px #ff00de;
+}
+.score{
+    color:#fff;
+}
+.checker{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #ff0001), color-stop(1.00, #8f0202));
+    background: -webkit-linear-gradient(#ff0001, #8f0202);
+    background: -moz-linear-gradient(#ff0001, #8f0202);
+    background: -o-linear-gradient(#ff0001, #8f0202);
+    background: -ms-linear-gradient(#ff0001, #8f0202);
+    background: linear-gradient(#ff0001, #8f0202);
+
+    opacity:0.8;
+    z-index:100;
+}
+
+.target{
+    border-radius:15%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #ababab), color-stop(1.00, #fff));
+    background: -webkit-linear-gradient(#ababab, #fff);
+    background: -moz-linear-gradient(#ababab, #fff);
+    background: -o-linear-gradient(#ababab, #fff);
+    background: -ms-linear-gradient(#ababab, #fff);
+}
+
+.target_small{
+    border-radius:15%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #ff88e4), color-stop(0.49, #ff49fd), color-stop(0.50, #ff00fc), color-stop(1.00, #ff65ef));
+    background: -webkit-linear-gradient(top, #ff88e4 0%, #ff49fd 49%, #ff00fc 50%, #ff65ef 100%);
+    background: -moz-linear-gradient(top, #ff88e4 0%, #ff49fd 49%, #ff00fc 50%, #ff65ef 100%);
+    background: -o-linear-gradient(top, #ff88e4 0%, #ff49fd 49%, #ff00fc 50%, #ff65ef 100%);
+    background: -ms-linear-gradient(top, #ff88e4 0%, #ff49fd 49%, #ff00fc 50%, #ff65ef 100%);
+	background: linear-gradient(to bottom, #ff88e4 0%, #ff49fd 49%, #ff00fc 50%, #ff65ef 100%);
+}
+
+.djkit_off{
+    background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #fff), color-stop(0.00, #ababab));
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -webkit-linear-gradient(#ababab, #fff);
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -moz-linear-gradient(#ababab, #fff);
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -o-linear-gradient(#ababab, #fff);
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -ms-linear-gradient(#ababab, #fff);
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, linear-gradient(#ababab, #fff);
+
+
+    border:3px solid #fff;
+    z-index:1;
+}
+
+.djkit_on{
+    background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #f3ce00), color-stop(1.00, #ff7800));
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -webkit-linear-gradient(#f3ce00, #ff7800);
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -moz-linear-gradient(#f3ce00, #ff7800);
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -o-linear-gradient(#f3ce00, #ff7800);
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, -ms-linear-gradient(#f3ce00, #ff7800);
+background: url(http://grad3.ecoloniq.jp/sample/img/patterns_01.png) repeat, linear-gradient(#f3ce00, #ff7800);
+
+    /*内側の影*/
+    -moz-box-shadow: 1px -3px 10px #000 inset;
+	-webkit-box-shadow: 1px -3px 10px #000 inset;
+    -o-box-shadow: 1px -3px 10px #000 inset;
+	-ms-box-shadow: 1px -3px 10px #000 inset;
+    box-shadow: 1px -3px 10px #000 inset;
+
+    border:3px solid #fff;
+    z-index:1;
+}
+
+.disc{
+    background-color:#000;
+    border:3px solid #fff;
+    border-radius:50%;
+    z-index:2;
+}
+
+.light{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #00e4ff), color-stop(0.00, #000));
+    background: -webkit-linear-gradient(#000, #00e4ff);
+    background: -moz-linear-gradient(#000, #00e4ff);
+    background: -o-linear-gradient(#000, #00e4ff);
+    background: -ms-linear-gradient(#000, #00e4ff);
+    background: linear-gradient(#000, #00e4ff);
+    
+    -moz-box-shadow: 1px -3px 10px #000 inset;
+	-webkit-box-shadow: 1px -3px 10px #000 inset;
+    -o-box-shadow: 1px -3px 10px #000 inset;
+	-ms-box-shadow: 1px -3px 10px #000 inset;
+    
+	z-index:-1;
+}
+
+
+.white_key_off{
+    background: -webkit-gradient(radial, 24% 100%, 0, 24% 100%, 184, color-stop(1.00, #cecece), color-stop(0.00, #fff));
+    background: -webkit-radial-gradient(24% 100%, circle, #fff, #cecece);
+    background: -moz-radial-gradient(24% 100%, circle, #fff, #cecece);
+    background: -o-radial-gradient(24% 100%, circle, #fff, #cecece);
+    background: -ms-radial-gradient(24% 100%, circle, #fff, #cecece);
+    background: radial-gradient(24% 100%, circle, #fff, #cecece);
+	/*内側の影*/
+    -moz-box-shadow: 1px -3px 10px #000 inset;
+	-webkit-box-shadow: 1px -3px 10px #000 inset;
+    -o-box-shadow: 1px -3px 10px #000 inset;
+	-ms-box-shadow: 1px -3px 10px #000 inset;
+    
+    z-index:10;
+}
+.white_key_on{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #f3ce00), color-stop(1.00, #ff7800));
+    background: -webkit-linear-gradient(#f3ce00, #ff7800);
+    background: -moz-linear-gradient(#f3ce00, #ff7800);
+    background: -o-linear-gradient(#f3ce00, #ff7800);
+    background: -ms-linear-gradient(#f3ce00, #ff7800);
+    background: linear-gradient(#f3ce00, #ff7800);
+    /*内側の影*/
+    -moz-box-shadow: 1px -3px 10px #000 inset;
+	-webkit-box-shadow: 1px -3px 10px #000 inset;
+    -o-box-shadow: 1px -3px 10px #000 inset;
+	-ms-box-shadow: 1px -3px 10px #000 inset;
+    box-shadow: 1px -3px 10px #000 inset;
+    
+    z-index:10;
+}
+.black_key_off{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #000), color-stop(1.00, #303030));
+    background: -webkit-linear-gradient(#000, #303030);
+    background: -moz-linear-gradient(#000, #303030);
+    background: -o-linear-gradient(#000, #303030);
+    background: -ms-linear-gradient(#000, #303030);
+    background: linear-gradient(#000, #303030);		
+	/*内側の影*/
+    -moz-box-shadow: 3px -3px 5px #fff inset;
+	-webkit-box-shadow: 3px -3px 5px #fff inset;
+    -o-box-shadow: 3px -3px 5px #fff inset;
+	-ms-box-shadow: 3px -3px 5px #fff inset;
+    box-shadow: 3px -3px 5px #fff inset;
+    
+    z-index:11;
+}
+.black_key_on{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #f3ce00), color-stop(1.00, #ff7800));
+    background: -webkit-linear-gradient(#f3ce00, #ff7800);
+    background: -moz-linear-gradient(#f3ce00, #ff7800);
+    background: -o-linear-gradient(#f3ce00, #ff7800);
+    background: -ms-linear-gradient(#f3ce00, #ff7800);
+    background: linear-gradient(#f3ce00, #ff7800);
+	/*内側の影*/
+    -moz-box-shadow: 3px -3px 5px #fff inset;
+	-webkit-box-shadow: 3px -3px 5px #fff inset;
+    -o-box-shadow: 3px -3px 5px #fff inset;
+	-ms-box-shadow: 3px -3px 5px #fff inset;
+    box-shadow: 3px -3px 5px #fff inset;
+    
+    z-index:11;
+}
+.radial.metal {
+    z-index:2;
+	border-radius: 50%;
+    
+	background-image:-webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+        -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
+        -webkit-radial-gradient(   0%  50%, 50%  7%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+        -webkit-radial-gradient( 100%  50%, 50%  5%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+        
+        -webkit-repeating-radial-gradient(	50% 50%, 100% 100%, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   3%, hsla(0,0%,  0%,.1) 3.5%),
+        -webkit-repeating-radial-gradient(	50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%,.1) 7.5%),
+        -webkit-repeating-radial-gradient(	50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.2) 2.2%),
+        
+        -webkit-radial-gradient(	50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);
+    
+	border-style:solid; border-width:20px;
+   
+
+    -moz-animation-name: dj_disc;
+    -moz-animation-duration: 3s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-name: dj_disc;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes dj_disc {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes dj_disc {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+

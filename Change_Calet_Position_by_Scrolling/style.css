@@ -1,0 +1,61 @@
+body { background-color: #62B1D0; 
+margin:0;
+padding:0;
+}
+
+div#content{
+
+    margin:0;
+padding:0;
+}
+
+input#range{
+padding:0;
+}
+input[type=range] {
+  border: 1px solid #4ba8b1;
+  margin: 0px 0px 5px 5px;
+  background: url(http://grad3.ecoloniq.jp/sample/img/patterns_06.png) repeat, -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #9bd6f2), color-stop(0.00, #d5f1fb));
+  background: url(http://grad3.ecoloniq.jp/sample/img/patterns_06.png) repeat, -webkit-linear-gradient(#d5f1fb, #9bd6f2);
+
+  pointer:cursor;
+  -webkit-appearance:none;
+  width:200px;
+  height:10px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+
+  box-shadow: 1px 1px 3px 1.5px #034769 inset;
+}
+input[type=range]::-webkit-slider-thumb
+{
+  -webkit-appearance:none;
+  
+  border:2px solid #FFC673;
+  /*
+
+  background-color:#FF8500;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #fff005), color-stop(0.00, #ff4800));
+  background: -webkit-linear-gradient(#ff4800, #fff005);
+*/
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 10, from(#FF9700), to(#FFB140));
+  ));
+  width:30px;
+  height:30px;
+  border-radius:30px;
+
+}
+p{
+    margin:0;
+padding:0;
+}
+
+#txtarea1{
+    font-family: "メイリオ"; 
+    font-size:18px;
+}
+
+#kakko{
+    font-family: "メイリオ"; 
+    font-size:18px;
+}

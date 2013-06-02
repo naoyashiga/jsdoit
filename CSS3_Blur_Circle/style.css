@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  background: #efefef; }
+
+.box {
+  position: absolute;
+  margin: 10px 5px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #FF8E00;
+  float: left;
+  border-top: 3px dotted #ff8e00;
+  border-right: 1.5px dotted #ff8e00;
+  border-bottom: 3px dotted #ff8e00;
+  border-left: 15px dotted #ff8e00;
+  -webkit-animation: spin 0.3s linear infinite;
+  -moz-animation: spin 0.3s linear infinite;
+  -ms-animation: spin 0.3s linear infinite;
+  -o-animation: spin 0.3s linear infinite;
+  animation: spin 0.3s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    border-top: 3px dotted #ff8e00;
+    border-right: 1.5px dotted #ff8e00;
+    border-bottom: 3px dotted #ff8e00;
+    border-left: 15px dotted #ff8e00; }
+
+  25% {
+    border-top-left-radius: 48%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 48%; }
+
+  50% {
+    border-top: 1.5px dotted #ff8e00;
+    border-right: 15px dotted #ff8e00;
+    border-bottom: 1.5px dotted #ff8e00;
+    border-left: 1.5px dotted #ff8e00;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 48%;
+    border-bottom-left-radius: 48%;
+    border-bottom-right-radius: 45%; }
+
+  100% {
+    border-top: 3px dotted #ff8e00;
+    border-right: 1.5px dotted #ff8e00;
+    border-bottom: 3px dotted #ff8e00;
+    border-left: 15px dotted #ff8e00; } }
+
+@keyframes spin {
+  0% {
+    border-top: 3px dotted #ff8e00;
+    border-right: 1.5px dotted #ff8e00;
+    border-bottom: 3px dotted #ff8e00;
+    border-left: 15px dotted #ff8e00; }
+
+  25% {
+    border-top-left-radius: 48%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 48%; }
+
+  50% {
+    border-top: 1.5px dotted #ff8e00;
+    border-right: 15px dotted #ff8e00;
+    border-bottom: 1.5px dotted #ff8e00;
+    border-left: 1.5px dotted #ff8e00;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 48%;
+    border-bottom-left-radius: 48%;
+    border-bottom-right-radius: 45%; }
+
+  100% {
+    border-top: 3px dotted #ff8e00;
+    border-right: 1.5px dotted #ff8e00;
+    border-bottom: 3px dotted #ff8e00;
+    border-left: 15px dotted #ff8e00; } }

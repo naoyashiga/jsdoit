@@ -1,0 +1,103 @@
+body{
+    background:#efefef;
+}
+$duration:1s;
+$timing:ease;
+$bgColor:#FF9B73;
+$borderColor:#FF4900;
+$width:100px;
+$borderStyle:solid,double,dashed,dotted;
+$borderWidth:30px;
+
+.meter {
+    overflow:hidden;
+    width: $width;
+    height: $width*2;
+    float:left;
+}
+
+.meter > div {
+    box-sizing: border-box;
+    background:$bgColor;
+    
+    border-color: $borderColor transparent transparent $borderColor;
+    border-radius: 50%;
+    width: 200%;
+    height: 100%;
+
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+
+    animation: spin $duration $timing $duration;
+    -webkit-animation: spin $duration $timing $duration;
+    
+    /*animationの最終状態を保持*/
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+    
+}
+
+.meter_right {
+    overflow:hidden;
+    width: $width;
+    height: $width*2;
+    float:left;
+    /*左半円を回転させて右半円にさせる*/
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.meter_right > div {
+    box-sizing: border-box;
+    background:$bgColor;
+
+    border-color: $borderColor transparent transparent $borderColor;
+    border-radius: 50%;
+    width: 200%;
+    height: 100%;
+    
+    
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    
+
+    animation: spin $duration $timing;
+    -webkit-animation: spin $duration $timing;
+    
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+
+/*回転アニメーション*/
+@keyframes spin{
+    0%{
+        transform: rotate(135deg);
+    }
+    100%{
+        transform: rotate(315deg);
+        
+    }
+}
+
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform: rotate(135deg);
+    }
+    100%{
+        -webkit-transform: rotate(315deg);
+    }
+}
+
+/*border style*/
+.solid{
+    border: $borderWidth nth($borderStyle,1);
+}
+.double{
+    border: $borderWidth nth($borderStyle,2);
+}
+.dashed{
+    border: $borderWidth nth($borderStyle,3);
+}
+.dotted{
+    border: $borderWidth nth($borderStyle,4);
+}

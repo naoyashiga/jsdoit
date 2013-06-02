@@ -1,0 +1,351 @@
+body {margin:0;
+    background-color:white;
+}
+
+.masu{
+    background-color:#FF0;
+    border:solid 10px #000;
+    border-radius:20%;
+}
+
+.signal{
+    background-color:#FFF;
+    border:solid 10px #000;
+    border-radius:20%;
+}
+
+.player_masu{
+    border-bottom:solid 5px #F00;
+}
+
+.enemy_masu{
+    border-bottom:solid 5px #00F;
+}
+
+/*グミの点灯アニメーション*/
+.color1{ -webkit-animation-name: gumi1;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;}
+@-webkit-keyframes gumi1{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+.color2{-webkit-animation-name: gumi2;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;-webkit-animation-delay: 0.5s;}
+@-webkit-keyframes gumi2{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}} 
+/*チョコレートの点灯アニメーション*/
+.color4{-webkit-animation-name: choco1;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;}
+@-webkit-keyframes choco1{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+.color5{-webkit-animation-name: choco2;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;-webkit-animation-delay: 0.5s;}
+@-webkit-keyframes choco2{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+.color6{-webkit-animation-name: choco3;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;-webkit-animation-delay: 1s;}
+@-webkit-keyframes choco3{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+.color7{-webkit-animation-name: choco4;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;-webkit-animation-delay: 1.5s;}
+@-webkit-keyframes choco4{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+.color8{-webkit-animation-name: choco5;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;-webkit-animation-delay: 2s;}
+@-webkit-keyframes choco5{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+.color9{-webkit-animation-name: choco6;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;-webkit-animation-delay: 2.5s;}
+@-webkit-keyframes choco6{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+ /*パインの点灯アニメーション*/               
+.color10{-webkit-animation-name: pine1;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;}
+@-webkit-keyframes pine1{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+.color11{-webkit-animation-name: pine2;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;-webkit-animation-delay: 0.5s;}
+@-webkit-keyframes pine2{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}
+.color12{-webkit-animation-name: pine3;-webkit-animation-duration: 0.5s;-webkit-animation-fill-mode: none;-webkit-animation-delay: 1s;}
+@-webkit-keyframes pine3{0%{background-color:#FFF;}50%{background-color:#FF0;}100%{background-color:#FFF;}}                
+
+/*マス番号の位置*/
+$one_position:translate(0px, 0px);//1
+$two_position:translate(100px, 0px);//2
+$three_position:translate(200px, 0px);//3
+$four_position:translate(0px, 100px);//4
+$five_position:translate(100px, 100px);//5
+$six_position:translate(200px, 100px);//6
+$seven_position:translate(0px, 200px);//7
+$eight_position:translate(100px, 200px);//8
+$nine_position:translate(200px, 200px);//9
+$ten_position:translate(0px, 300px);//10
+$eleven_position:translate(100px, 300px);//11
+$twelve_position:translate(200px, 300px);//12
+
+/*マスの位置を配列に格納*/
+$position_lists:$one_position,$two_position,$three_position,
+                        $four_position,$five_position,$six_position,
+                        $seven_position,$eight_position,$nine_position,
+                        $ten_position,$eleven_position,$twelve_position;
+
+
+@mixin player_masu_transition($current,$next,$sign){
+    @if $current + $sign > 12{/*12で折り返すとき*/
+        @if $sign == 2{/*2進む(グミ)*/
+            0%{
+                     -webkit-transform:nth($position_lists, $current);
+            }
+            50%{
+                    -webkit-transform:nth($position_lists, 12);
+            }
+            100%{
+                     -webkit-transform:nth($position_lists, $next);
+            }
+    	}@else if $sign == 6{/*6進む(チョコレート)*/
+            @if $current + $sign == 13{
+                0%{
+                            -webkit-transform:nth($position_lists, $current);
+                }
+                16%{
+                            -webkit-transform:nth($position_lists, $current+1);
+                }
+                32%{
+                            -webkit-transform:nth($position_lists, $current+2);
+                }
+                48%{
+                            -webkit-transform:nth($position_lists, $current+3);
+                }
+                60%{
+                            -webkit-transform:nth($position_lists, $current+4);
+                }
+                78%{
+                            -webkit-transform:nth($position_lists, $current+5);
+                }
+                100%{
+                            -webkit-transform:nth($position_lists, $next);
+                }
+            }
+            @if $current + $sign == 14{
+                0%{
+                            -webkit-transform:nth($position_lists, $current);
+                }
+                16%{
+                            -webkit-transform:nth($position_lists, $current+1);
+                }
+                32%{
+                            -webkit-transform:nth($position_lists, $current+2);
+                }
+                48%{
+                            -webkit-transform:nth($position_lists, $current+3);
+                }
+                60%{
+                            -webkit-transform:nth($position_lists, $current+4);//12
+                }
+                78%{
+                            -webkit-transform:nth($position_lists, $next+1);
+                }
+                100%{
+                            -webkit-transform:nth($position_lists, $next);
+                }
+            }
+            @if $current + $sign == 15{
+                0%{
+                            -webkit-transform:nth($position_lists, $current);
+                }
+                16%{
+                            -webkit-transform:nth($position_lists, $current+1);
+                }
+                32%{
+                            -webkit-transform:nth($position_lists, $current+2);
+                }
+                48%{
+                            -webkit-transform:nth($position_lists, $current+3);//12
+                }
+                60%{
+                            -webkit-transform:nth($position_lists, $next+2);
+                }
+                78%{
+                            -webkit-transform:nth($position_lists,$next+1);
+                }
+                100%{
+                            -webkit-transform:nth($position_lists, $next);
+                }
+            }
+            @if $current + $sign == 16{
+                0%{
+                            -webkit-transform:nth($position_lists, $current);
+                }
+                16%{
+                            -webkit-transform:nth($position_lists, $current+1);
+                }
+                32%{
+                            -webkit-transform:nth($position_lists, $current+2);//12
+                }
+                48%{
+                            -webkit-transform:nth($position_lists, $next+3);
+                }
+                60%{
+                            -webkit-transform:nth($position_lists, $next+2);
+                }
+                78%{
+                            -webkit-transform:nth($position_lists,$next+1);
+                }
+                100%{
+                            -webkit-transform:nth($position_lists, $next);
+                }
+            }
+            @if $current + $sign == 17{
+                0%{
+                            -webkit-transform:nth($position_lists, $current);
+                }
+                16%{
+                            -webkit-transform:nth($position_lists, $current+1);//12
+                }
+                32%{
+                            -webkit-transform:nth($position_lists, $next+4);
+                }
+                48%{
+                            -webkit-transform:nth($position_lists, $next+3);
+                }
+                60%{
+                            -webkit-transform:nth($position_lists, $next+2);
+                }
+                78%{
+                            -webkit-transform:nth($position_lists,$next+1);
+                }
+                100%{
+                            -webkit-transform:nth($position_lists, $next);
+                }
+            }                                                                    
+    	}@else{/*3進む(パイン)*/
+            @if $current + $sign == 13{
+                0%{
+                            -webkit-transform:nth($position_lists, $current);
+                }
+                33%{
+                            -webkit-transform:nth($position_lists, $current+1);
+                }
+                66%{
+                            -webkit-transform:nth($position_lists, $current+2);//12
+                }
+                100%{
+                            -webkit-transform:nth($position_lists, $next);
+                }
+           }
+           @if $current + $sign == 14{
+                0%{
+                            -webkit-transform:nth($position_lists, $current);
+                }
+                33%{
+                            -webkit-transform:nth($position_lists, $current+1);//12
+                }
+                66%{
+                            -webkit-transform:nth($position_lists, $next+1);
+                }
+                100%{
+                            -webkit-transform:nth($position_lists, $next);
+                }
+           }                                                                                                                
+    	}
+    }@else{/*12で折り返さないとき*/
+        @if $sign == 2{/*2進む(グミ)*/
+            0%{
+                     -webkit-transform:nth($position_lists, $current);
+            }
+            50%{
+                    -webkit-transform:nth($position_lists, $current+1);
+            }
+            100%{
+                     -webkit-transform:nth($position_lists, $current+2);
+            }
+    	}@else if $sign == 6{/*6進む(チョコレート)*/                                                                    
+            0%{
+                        -webkit-transform:nth($position_lists, $current);
+            }
+            16%{
+                        -webkit-transform:nth($position_lists, $current+1);
+            }
+            32%{
+                        -webkit-transform:nth($position_lists, $current+2);
+            }
+            48%{
+                        -webkit-transform:nth($position_lists, $current+3);
+            }
+            60%{
+                        -webkit-transform:nth($position_lists, $current+4);
+            }
+            78%{
+                        -webkit-transform:nth($position_lists, $current+5);
+            }
+            100%{
+                        -webkit-transform:nth($position_lists, $current+6);
+            }
+    	}@else{/*3進む(パイン)*/
+            0%{
+                        -webkit-transform:nth($position_lists, $current);
+            }
+            33%{
+                        -webkit-transform:nth($position_lists, $current+1);
+            }
+            66%{
+                        -webkit-transform:nth($position_lists, $current+2);
+            }
+            100%{
+                        -webkit-transform:nth($position_lists, $current+3);
+            }
+    	}
+    } 
+}
+
+/*グミが出たときの進み方*/
+.player_move21{-webkit-animation-name: anime21;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move22{-webkit-animation-name: anime22;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move23{-webkit-animation-name: anime23;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move24{-webkit-animation-name: anime24;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move25{-webkit-animation-name: anime25;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move26{-webkit-animation-name: anime26;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move27{-webkit-animation-name: anime27;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move28{-webkit-animation-name: anime28;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move29{-webkit-animation-name: anime29;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move210{-webkit-animation-name: anime210;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}
+.player_move211{-webkit-animation-name: anime211;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: forwards;}                                                                                                                                                                                                                                                    
+@-webkit-keyframes anime21{@include player_masu_transition(1,3,2);}
+@-webkit-keyframes anime22{@include player_masu_transition(2,4,2);}
+@-webkit-keyframes anime23{@include player_masu_transition(3,5,2);}
+@-webkit-keyframes anime24{@include player_masu_transition(4,6,2);}
+@-webkit-keyframes anime25{@include player_masu_transition(5,7,2);}
+@-webkit-keyframes anime26{@include player_masu_transition(6,8,2);}
+@-webkit-keyframes anime27{@include player_masu_transition(7,9,2);}
+@-webkit-keyframes anime28{@include player_masu_transition(8,10,2);}
+@-webkit-keyframes anime29{@include player_masu_transition(9,11,2);}
+@-webkit-keyframes anime210{@include player_masu_transition(10,12,2);}
+@-webkit-keyframes anime211{@include player_masu_transition(11,11,2);}                                                                                                                                                                                                                                        
+/*チョコレートが出たときの進み方*/
+.player_move61{-webkit-animation-name: anime61;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move62{-webkit-animation-name: anime62;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move63{-webkit-animation-name: anime63;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move64{-webkit-animation-name: anime64;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move65{-webkit-animation-name: anime65;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move66{-webkit-animation-name: anime66;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move67{-webkit-animation-name: anime67;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move68{-webkit-animation-name: anime68;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move69{-webkit-animation-name: anime69;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move610{-webkit-animation-name: anime610;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}
+.player_move611{-webkit-animation-name: anime611;-webkit-animation-duration: 3s;-webkit-animation-fill-mode: forwards;}                                                                                                                                                                                                                                                    
+@-webkit-keyframes anime61{@include player_masu_transition(1,7,6);}
+@-webkit-keyframes anime62{@include player_masu_transition(2,8,6);}
+@-webkit-keyframes anime63{@include player_masu_transition(3,9,6);}
+@-webkit-keyframes anime64{@include player_masu_transition(4,10,6);}
+@-webkit-keyframes anime65{@include player_masu_transition(5,11,6);}
+@-webkit-keyframes anime66{@include player_masu_transition(6,12,6);}
+@-webkit-keyframes anime67{@include player_masu_transition(7,11,6);}
+@-webkit-keyframes anime68{@include player_masu_transition(8,10,6);}
+@-webkit-keyframes anime69{@include player_masu_transition(9,9,6);}
+@-webkit-keyframes anime610{@include player_masu_transition(10,8,6);}
+@-webkit-keyframes anime611{@include player_masu_transition(11,7,6);}                                                                                                                                                                                                                                        
+/*パインが出たときの進み方*/
+.player_move31{-webkit-animation-name: anime31;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move32{-webkit-animation-name: anime32;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move33{-webkit-animation-name: anime33;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move34{-webkit-animation-name: anime34;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move35{-webkit-animation-name: anime35;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move36{-webkit-animation-name: anime36;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move37{-webkit-animation-name: anime37;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move38{-webkit-animation-name: anime38;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move39{-webkit-animation-name: anime39;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move310{-webkit-animation-name: anime310;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}
+.player_move311{-webkit-animation-name: anime311;-webkit-animation-duration: 1.5s;-webkit-animation-fill-mode: forwards;}                                                                                                                                                                                                                                                    
+@-webkit-keyframes anime31{@include player_masu_transition(1,4,3);}
+@-webkit-keyframes anime32{@include player_masu_transition(2,5,3);}
+@-webkit-keyframes anime33{@include player_masu_transition(3,6,3);}
+@-webkit-keyframes anime34{@include player_masu_transition(4,7,3);}
+@-webkit-keyframes anime35{@include player_masu_transition(5,8,3);}
+@-webkit-keyframes anime36{@include player_masu_transition(6,9,3);}
+@-webkit-keyframes anime37{@include player_masu_transition(7,14,3);}
+@-webkit-keyframes anime38{@include player_masu_transition(8,13,3);}
+@-webkit-keyframes anime39{@include player_masu_transition(9,12,3);}
+@-webkit-keyframes anime310{@include player_masu_transition(10,11,3);}
+@-webkit-keyframes anime311{@include player_masu_transition(11,10,3);}
+
+                                                                                                                                                                                                                                      
+

@@ -1,0 +1,36 @@
+body { background-color: #DDDDDD;
+    font: bold 15px "helvetica neue", helvetica, arial, sans-serif;
+}
+
+.demo{
+    background:#4282D3;
+    padding:10px;
+    margin-bottom:10px;
+    }
+.opacity{
+    background:#000;
+    padding:10px;
+    color:#fff;
+    opacity:0.6;
+}
+.demo2{
+    	background:#4282D3;
+	padding:10px;
+	margin-bottom:10px;
+    }
+.rgba{
+    background-color:rgba(0,0,0,0.6);
+    padding:10px;
+    color:#fff;
+}
+
+.demo3{
+	background:#4282D3;
+	padding:10px;
+	margin-bottom:10px;
+    }
+.rgba2{
+    background-color:rgba(0,0,0,0.6);
+    padding:10px;
+    color:rgba(255,255,255,0.6);
+}

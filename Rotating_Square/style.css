@@ -1,0 +1,28 @@
+body {
+  background-color: #DDDDDD;
+  font: 30px sans-serif; }
+
+.box {
+  width: 0px;
+  height: 0px;
+  border-top: solid 30px black;
+  border-right: solid 30px transparent;
+  border-bottom: solid 30px black;
+  border-left: solid 30px transparent;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  /*
+  -webkit-animation:$name $duration $timing $delay $iteraiton $direction;*/
+  -moz-animation: anime1 0.8s linear 0s infinite normal; }
+
+@-moz-keyframes anime1 {
+  0% {
+    -moz-transform: rotateZ(0deg); }
+
+  100% {
+    -moz-transform: rotateZ(360deg); } }
+
+.box:hover {
+  -moz-animation-play-state: paused; }

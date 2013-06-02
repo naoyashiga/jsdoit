@@ -1,0 +1,70 @@
+body { background-color: #000;}
+#logos {
+  position:absolute;  top: 0px;  left: 150px;  -webkit-perspective: 800px; 
+}
+#cube {
+  display: block;  position: relative;  margin: 30px auto;
+  height: 200px;  width: 200px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+}
+
+#cube {
+-webkit-animation: upyourscache1356400200569 5s infinite cubic-bezier(0.08, 0.95, 0.94, 0.06);
+}
+@-webkit-keyframes upyourscache1356400200569 {
+0% { -webkit-transform: rotateY(0) ;}
+100% {-webkit-transform: rotateY(360deg) ; }
+}
+$size:50px;
+$size2:$size/2;            
+.circle{
+  position: absolute;
+  height: $size;
+  width: $size;
+  background-color: #00C90D;
+  border-radius:50px;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: 0.3s ease-in-out;        
+}
+    
+
+$margin:100px;
+$startX:0px;
+$startY:-300px;
+$startZ:200px;
+$ROW:6;
+$Z_ROW:6;
+$COLUMN:12;
+@for $i from 1 through $ROW{
+  @for $j from 1 through $COLUMN{
+    @for $k from 1 through $Z_ROW{
+      .front-#{$i}-#{$j}-#{$k} {
+        -webkit-transform:  translate3d($startX+$margin*$i,$startY+$margin*$j,$startZ+$margin*$k);
+        height: $size/$k;
+        width: $size/$k;
+        -webkit-transition: 0.3s ease-in-out;
+      }
+
+      .front-#{$i}-#{$j}-#{$k}:hover {
+        -webkit-transform:  translate3d($startX+$margin*$i,$startY+$margin*$j,$startZ*2+$margin*$k);
+        
+      }
+                            
+    }
+  }
+}
+
+@for $i from 1 through $ROW{
+  @for $j from 1 through $COLUMN{
+    .back-#{$i}-#{$j} {
+      -webkit-transform:  rotateY(180deg) translate3d($startX+-$margin*$i,$startY+$margin*$j,$startZ);
+      -webkit-transition: 0.3s ease-in-out;
+    }
+
+    .back-#{$i}-#{$j}:hover {
+        -webkit-transform:  rotateY(180deg) translate3d($startX+-$margin*$i,$startY+$margin*$j,$startZ+-100px);
+        
+    }
+  }
+}

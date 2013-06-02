@@ -1,0 +1,22 @@
+body { background-color: #DDDDDD;}
+
+.player{
+    background-color: #FFF;
+    border-radius:50%;
+}
+
+.enemy{
+    background-color: #000E77;
+    border-radius:50%;
+}
+
+.item{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #fff600), color-stop(0.00, #967315));
+    background: -webkit-linear-gradient(#967315, #fff600);
+    background: -moz-linear-gradient(#967315, #fff600);
+    background: -o-linear-gradient(#967315, #fff600);
+    background: -ms-linear-gradient(#967315, #fff600);
+    background: linear-gradient(#967315, #fff600);
+    
+    border-radius:50%;
+}

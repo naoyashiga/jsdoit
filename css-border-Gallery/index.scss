@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #efefef;
+}
+.box{
+    margin:10px 5px;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#04819E;
+    
+    float:left;
+    color: #fff;
+    font: bold 15px "helvetica neue", helvetica, arial, sans-serif;
+    text-align:center;
+    line-height:65px;
+}
+
+$border_width:8px;
+
+$border_style:none,solid,double,groove,ridge,inset,outset,dashed,dotted;
+
+@for $i from 0 to length($border_style){
+    .border-#{$i}{
+
+        border-top:$border_width nth($border_style,$i + 1) #206676;
+        border-right:$border_width nth($border_style,$i + 1) #38B2CE;
+        border-bottom:$border_width nth($border_style,$i + 1) #015367;
+        border-left:$border_width nth($border_style,$i + 1) #60B9CE;
+    }
+}
+

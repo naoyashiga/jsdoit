@@ -1,0 +1,96 @@
+/*背景色*/
+$bgColor:#efefef;
+/*メーターのサイズ*/
+$meter_size:200px;
+/*ボーダーのサイズ*/
+$border_size:80px;
+/*ボーダーの色*/
+$border_color:$bgColor,#FF5900;
+
+/*メーターを囲うdivのサイズ*/
+$wrapper_size:$meter_size + $border_size*2;
+/*メーターを囲うdivの位置*/
+$wrapper_margin_top:50px;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: $bgColor;
+  font: 30px sans-serif;
+}
+
+#wrapper{
+    margin:$wrapper_margin_top;
+    
+    width:$wrapper_size;
+    height:$wrapper_size;
+    border-radius:50%;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+}
+
+/*回転アニメーション*/
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform:rotateZ(0deg);
+    }
+    100%{
+        -webkit-transform:rotateZ(180deg);
+    }
+}
+
+@-moz-keyframes spin{
+    0%{
+        -moz-transform:rotateZ(0deg);
+    }
+    100%{
+        -moz-transform:rotateZ(180deg);
+    }
+}
+
+/*カバーとなる背景色の半円*/
+.cover{
+    position:relative;
+
+    width:$meter_size;
+    height:$meter_size / 10;
+    border-radius:$meter_size $meter_size 0 0;
+
+    /*ボーダーの設定*/
+    border-top:$border_size solid nth($border_color,1);
+    border-right:$border_size solid nth($border_color,1);
+    border-bottom:$border_size solid nth($border_color,1);
+    border-left:$border_size solid nth($border_color,1); 
+}
+
+
+/*メーターとなるオレンジの半円*/
+.meter{
+    position:absolute;
+    top:$wrapper_margin_top;
+    left:$wrapper_margin_top;
+    
+    width:$meter_size;
+    height:$meter_size / 10;
+    border-radius:$meter_size $meter_size 0 0;
+    
+    
+    /*ボーダーの設定*/
+    border-top:$border_size solid nth($border_color,1);
+    border-right:$border_size solid nth($border_color,2);
+    border-bottom:$border_size solid nth($border_color,1);
+    border-left:$border_size solid nth($border_color,2);
+
+    /*最背面に設置*/
+    z-index:-1;
+}
+
+
+
+
+
+

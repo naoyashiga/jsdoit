@@ -1,0 +1,12 @@
+body { background-color: #DDDDDD; font: 12px sans-serif; }
+
+.box{
+    float:left;
+    margin-left:10px;    
+}
+
+p{
+    margin:0;
+}
+
+input.bold { width: 15px; }

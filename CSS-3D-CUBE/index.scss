@@ -1,0 +1,123 @@
+input[type="text"]{
+	width:25px;
+}
+body {padding: 4em;
+background: #000;}
+
+
+
+#cube-container{
+	position: absolute;
+    width: 100%;
+    height: 100%;      
+}
+
+#cube-viewport{
+	/*奥行きを指定*/
+	-webkit-perspective:800px;
+	/*視点の位置を指定*/
+	-webkit-perspective-origin:50% 500px;
+}
+
+
+$speed:1s;
+$speed2:10s;
+
+$timing:ease-in;
+
+$timing2:ease;    
+#cube{
+	opacity: 0.8;
+	height: 400px;
+	width: 400px;
+	/*3D表現を使用する*/
+	-webkit-transform-style:preserve-3d;
+    -webkit-animation: rotate $speed2 $timing2 -2s infinite alternate;
+}
+/*キューブの回転アニメーション*/
+@-webkit-keyframes rotate {
+0% {-webkit-transform:rotateX(0deg) rotateY(0deg);}
+25% {-webkit-transform:rotateX(90deg) rotateY(60deg);}
+50% {-webkit-transform:rotateY(120deg);}
+75% {-webkit-transform:rotateX(300deg) rotateY(180deg);}
+100% {-webkit-transform: rotateX(180deg);}
+}
+$size:10px;
+                        
+#cube .cubie{
+	position:absolute;
+	margin:1px;
+	border: 3px solid black;
+	border-radius: 15px;
+	width:$size;
+	height:$size;
+    background-color:aqua;
+	z-index: -1;
+	text-align: center;
+	font-size: 30px;
+ 
+}
+
+#cube .cubie > div{
+	line-height: 100px;
+	border-radius: 8px;
+}
+
+#cube .cubie > div span{
+	opacity: 0.6;
+	font-size: 300px;
+}
+                        
+$goal:200px;
+                        
+/*キューブの位置*/
+@for $i from 1 through 6{
+        .square-#{$i} {
+                -webkit-animation: anime#{$i} $speed $timing -2s infinite alternate;
+		}
+}
+$size2:$size/2;
+/*キューブの各面におけるアニメーション*/                                
+@-webkit-keyframes anime1 {
+0% {-webkit-transform:rotateX(-180deg) translate3d($size2,-$size2,$size2*3);}                                               
+100% {-webkit-transform:rotateX(-180deg) translate3d($size2,-$size2,$size2*3+$goal);
+    width: $size+$goal*2;
+	height: $size+$goal*2;}
+}
+
+@-webkit-keyframes anime2 {
+0% {-webkit-transform:rotateY(-90deg) translate3d(-$size2*2,$size2,0px);}
+100% {-webkit-transform:rotateY(-90deg) translate3d(-$size2*2,$size2,$goal);
+      width: $size+$goal*2;
+	height: $size+$goal*2;                                              }
+}
+                        
+@-webkit-keyframes anime3 {
+0% {-webkit-transform:rotateY(-90deg) translate3d(-$size2*2,$size2,-$size2*2);}
+100% {-webkit-transform:rotateY(-90deg) translate3d(-$size2*2,$size2,-$size2*2-$goal);
+     width: $size+$goal*2;
+	height: $size+$goal*2;                                                       }
+}
+                                
+@-webkit-keyframes anime4 {
+0% {-webkit-transform:rotateX(-180deg) translate3d($size2,-$size2,$size2);}
+100% {-webkit-transform:rotateX(-180deg) translate3d($size2,-$size2,$size2 -$goal);
+     width: $size;
+	height: $size;                                                               }
+}
+                                        
+@-webkit-keyframes anime5 {
+0% {-webkit-transform:rotateX(-90deg) translate3d($size2,$size2*2,$size2*2);}
+100% {-webkit-transform:rotateX(-90deg) translate3d($size2,$size2*2,$size2*2+$goal);
+      width: $size+$goal*2;
+	height: $size+$goal*2;                                                                      }
+}
+                                                
+@-webkit-keyframes anime6 {
+0% {-webkit-transform:rotateX(-90deg) translate3d($size2,$size2*2,0px);}
+100% {-webkit-transform:rotateX(-90deg) translate3d($size2,$size2*2,-$goal);
+     width: $size+$goal*2;
+	height: $size+$goal*2;                                                                               }
+}                                                
+
+                                    

@@ -1,0 +1,76 @@
+body{
+	background-color:#000;
+	margin:0;
+	padding:0;
+}
+
+#counter{
+	/*フォント*/
+	font-size: 80px;	
+	color: #fff;
+	font-family: 'Russo One', sans-serif;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-100px;
+	margin-top:-100px;
+	line-height:200px;
+	text-align:center;
+	/*文字に傾斜*/
+	-moz-transform: skewX(-10deg);
+	-webkit-transform: skewX(-10deg);
+}
+
+#box{
+	position:absolute;
+	left:50%;
+	top:70%;
+	margin-left:-100px;
+	margin-top:-100px;
+	line-height:200px;
+	
+	text-align:center;
+}
+input{
+	font-family: 'Russo One', sans-serif;
+	color:#333;
+}
+#num{
+	padding:10px;
+	border: 0;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-image: -moz-linear-gradient(top, #FFFFFF, #D3D3D3);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #FFFFFF), color-stop(1.0, #D3D3D3));
+	background-color: #DDDDDD;
+	background-repeat: repeat-x;
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+	-webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+		  border-radius: 5px;
+}
+
+#num:focus{
+	-webkit-animation-name: greenPulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+#btn{
+	padding:10px;
+	border: 0;
+	-webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+		  border-radius: 5px;
+	-webkit-animation-name: greenPulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;	
+}
+
+@-webkit-keyframes greenPulse {
+from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}
